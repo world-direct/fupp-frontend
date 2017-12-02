@@ -1,3 +1,9 @@
 * Installation instructions
 
-1. npm install
+npm install
+
+
+
+* Running the app
+
+.\node_modules\.bin\electron .
