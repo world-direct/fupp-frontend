@@ -5,9 +5,20 @@
     <title>Hello World!</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>Welcome to FUPP</h1>
     We are using node <script>document.write(process.versions.node)</script>,
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+
+    <script>
+        // Delay loading of main app script to show nice please wait message
+        function main() {
+            var script = document.createElement("script");
+            script.src = "app.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
+        main();
+    </script>
+
   </body>
 </html>
