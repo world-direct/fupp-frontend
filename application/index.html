@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <script>window.$ = window.jQuery = require('jquery');</script>
   </head>
   <body>
     <h1>Welcome to FUPP</h1>
     We are using node <script>document.write(process.versions.node)</script>,
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+
+    <div id="main">
+        <!-- TODO: Put UI code here -->
+    </div>
 
     <script>
         // Delay loading of main app script to show nice please wait message

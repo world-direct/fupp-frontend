@@ -9,9 +9,11 @@
         "url": "https://github.com/world-direct/fupp-frontend"
     },
     "devDependencies": {
-      "electron":"1.7.9"
+        "electron":"^1.7.9"
     },
     "dependencies": {
+        "bootstrap":"^3.3.7",
+        "jquery":"^3.2.1"
     }
-  }
+}
   
