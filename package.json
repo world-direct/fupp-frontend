@@ -1,0 +1,17 @@
+{
+    "name": "fupp",
+    "version": "1.0.0",
+    "main": "main.js",
+    "description": "A cool application that hopefully doesn't make fupp.",
+    "license" : "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/world-direct/fupp-frontend"
+    },
+    "devDependencies": {
+      "electron":"1.7.9"
+    },
+    "dependencies": {
+    }
+  }
+  
