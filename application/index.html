@@ -10,6 +10,27 @@
 
     <script src="test_load.js"></script>
     <script src="test_statistics.js"></script>
+
+    <style>
+        table, th, td 
+        {
+            margin:10px 0;
+            border:solid 1px #333;
+            padding:2px 4px;
+            font:15px Verdana;
+        }
+        th {
+            font-weight:bold;
+        }
+
+        input {
+            display: block;
+            padding : 0 10px;
+            margin  : 0;
+            border: 1px solid #999;
+            height: 25px;
+        }
+    </style>
   </head>
   <body>
 
@@ -19,24 +40,31 @@
             <h1>Welcome to FUPP</h1>
 
             <div id="actions">
+                    <label>Akka Endpoint:
+                            <input type="text" id="akkaEndpointTxtBox"required placeholder="http://10.0.0.32:8080"> <br>
+                    </label> <br> <br>
+
                 <h2>Actions</h2>
-                <input type="text" id="uriTxtBox"> <label>z.B. http://10.0.0.32:8080</label><br>
+
+                <label>
+                    <span>Anzahl der Benutzer</span>
+                    <input type="number" id="userCountTxtBox" min="1" required>
+                </label><br>
+                <label>
+                    <span>Anzahl der Abfragen pro Benutzer:</span>
+                    <input type="number" id="requestCountTxtBox" min="1" required>
+                </label><br>
+                <label>
+                    <span>URI:</span>
+                    <input type="text" id="uriTxtBox"required placeholder="www.google.com">
+                </label><br>
                 <button id="btnStartLoadTest" class="btn">Start Load Test</button>
                 <button id="btnLoadTestStatistics" class="btn">Load Test Statistics</button>
             </div>
 
-            <div id="configuration">
-                <h2>Configuration</h2>
-                <!-- TODO: Put configuration here -->
-            </div>
-
             <div id="result">
                 <h2>Result</h2>
-                <table id="table" border="1">
-                    <tbody>
-                        
-                    </tbody>
-                </table>
+                <div id="showResult"></div>
             </div>
         </div>
     </div>

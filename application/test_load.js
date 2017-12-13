@@ -1,25 +1,19 @@
 function test_load() {
     console.log("test_load");
 
-    // TODO: POST test configuration
-
-    /*
-    (POST) StartLoadTest
-        URL
-        WaitTime
-        DurationTime
-        WorkerCount
-    */
+    var akkaEndpoint = document.getElementById('akkaEndpointTxtBox').value;
+   
     var uri = document.getElementById('uriTxtBox').value;
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", uri, true ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-    
-    //document.getElementById('view')
-    ///.exectueJavaScrpipt('fetch("http://10.0.0.32:8080", {method: "get"})');
-  //.executeJavaScript('fetch("http://example.com/?foo=bar", {method: "post"});');
- 
+    var userCount = document.getElementById('userCountTxtBox').value;
+    var requestCount = document.getElementById('requestCountTxtBox').value;
 
-  
+    var params = "uri="+uri+"&userCount="+userCount+"&requestCount="+ requestCount
+
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "POST", akkaEndpoint, true ); // false for synchronous request
+    xmlHttp.send( params );
+
+    // todo check status == 200 || 500
+
+    return xmlHttp.responseText;
 }
