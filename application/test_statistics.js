@@ -4,13 +4,15 @@ function test_statistics() {
     var akkaEndpoint = document.getElementById('akkaEndpointTxtBox').value;
 
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", akkaEndpoint, true ); // false for synchronous request
+    //xmlHttp.open( "GET", akkaEndpoint, true ); // false for synchronous request
+	xmlHttp.open( "GET", akkaEndpoint + "/api/testresults", false );
     xmlHttp.send( null );
     //return xmlHttp.responseText;
 
+	var myResult = JSON.parse(xmlHttp.responseText);
 
-    var myResult = [ {"url":"google.at", "successful": "c0.85", "totalTime":"231"}, 
-    {"url":"facebook.com", "successful": "0.74", "totalTime":"100"}];
+    //var myResult = [ {"url":"google.at", "successful": "c0.85", "totalTime":"231"}, 
+    //{"url":"facebook.com", "successful": "0.74", "totalTime":"100"}];
     
     var table = document.createElement("table");
 

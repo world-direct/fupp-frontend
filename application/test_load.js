@@ -7,11 +7,11 @@ function test_load() {
     var userCount = document.getElementById('userCountTxtBox').value;
     var requestCount = document.getElementById('requestCountTxtBox').value;
 
-    var params = "uri="+uri+"&userCount="+userCount+"&requestCount="+ requestCount
+    var params = "?url="+encodeURIComponent(uri)+"&nAgents="+userCount+"&nRequests="+ requestCount
 
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "POST", akkaEndpoint, true ); // false for synchronous request
-    xmlHttp.send( params );
+    xmlHttp.open( "GET", akkaEndpoint + "/api/start" + params, false ); // false for synchronous request
+    xmlHttp.send( null );
 
     // todo check status == 200 || 500
 
