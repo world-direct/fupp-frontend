@@ -1,11 +1,15 @@
 function test_load() {
     console.log("test_load");
 
-    var akkaEndpoint = document.getElementById('akkaEndpointTxtBox').value;
-   
-    var uri = document.getElementById('uriTxtBox').value;
-    var userCount = document.getElementById('userCountTxtBox').value;
-    var requestCount = document.getElementById('requestCountTxtBox').value;
+    var akkaEndpointElement = document.getElementById('akkaEndpointTxtBox');
+    var uriElement = document.getElementById('uriTxtBox');
+    var userCountElement = document.getElementById('userCountTxtBox');
+    var requestCountElement = document.getElementById('requestCountTxtBox');
+
+    var akkaEndpoint = akkaEndpointElement.value || akkaEndpointElement.placeholder;
+    var uri = uriElement.value || uriElement.placeholder;
+    var userCount = userCountElement.value || 1;
+    var requestCount = requestCountElement.value || 1;
 
     var params = "?url="+encodeURIComponent(uri)+"&nAgents="+userCount+"&nRequests="+ requestCount
 

@@ -41,22 +41,22 @@
 
             <div id="actions">
                     <label>Akka Endpoint:
-                            <input type="text" id="akkaEndpointTxtBox"required placeholder="http://10.0.0.32:8080"> <br>
+                            <input type="text" id="akkaEndpointTxtBox"required placeholder="http://localhost:5000"> <br>
                     </label> <br> <br>
 
                 <h2>Actions</h2>
 
                 <label>
                     <span>Anzahl der Benutzer</span>
-                    <input type="number" id="userCountTxtBox" min="1" required>
+                    <input type="number" id="userCountTxtBox" min="1" required placeholder="1">
                 </label><br>
                 <label>
                     <span>Anzahl der Abfragen pro Benutzer:</span>
-                    <input type="number" id="requestCountTxtBox" min="1" required>
+                    <input type="number" id="requestCountTxtBox" min="1" required placeholder="1">
                 </label><br>
                 <label>
                     <span>URI:</span>
-                    <input type="text" id="uriTxtBox"required placeholder="www.google.com">
+                    <input type="text" id="uriTxtBox"required placeholder="http://www.google.com">
                 </label><br>
                 <button id="btnStartLoadTest" class="btn">Start Load Test</button>
                 <button id="btnLoadTestStatistics" class="btn">Load Test Statistics</button>
